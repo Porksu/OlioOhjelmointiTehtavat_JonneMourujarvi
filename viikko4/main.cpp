@@ -1,12 +1,33 @@
 #include <iostream>
 #include "pankkitili.h"
 #include "luottotili.h"
+#include "asiakas.h"
 
 using namespace std;
 
 int main()
 {
-    Pankkitili pa("Mario");
-    pa.withdraw(50);
-    return 0;
+    asiakas A("Eino", 1000);
+    cout << endl;
+    A.showSaldo();
+    cout << endl;
+    A.talletus(250);
+    cout << endl;
+    A.luotonNosto(150);
+    cout << endl;
+    A.showSaldo();
+    cout << endl;
+
+    asiakas B("Marjatta", 1000);
+    cout << endl;
+    B.showSaldo();
+    cout << endl;
+    cout << A.getName();
+    cout << endl;
+    A.tilisiirto(50, B);
+    cout << endl;
+    cout << A.getName();
+    cout << endl;
+    B.showSaldo();
+    cout << endl;
 }

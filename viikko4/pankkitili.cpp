@@ -17,13 +17,16 @@ double Pankkitili::getBalance()
 bool Pankkitili::withdraw(double summa)
 {
     if (summa > saldo){
+        cout <<  "inga pengar, tilillä ei ole rahaa" << endl;
         return false;
     }
     if (summa < 0){
+        cout << "Nostettava summa ei voi olla negatiivinen" << endl;
         return false;
     }
     if (summa <= saldo){
         saldo -= summa;
+        cout << "saldo jalkeen " << saldo << endl;
         return true;
     }
     else {
