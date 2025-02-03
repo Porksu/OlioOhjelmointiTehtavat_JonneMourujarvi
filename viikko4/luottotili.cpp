@@ -8,7 +8,7 @@ Luottotili::Luottotili(string omistaja, double lr)
     : Pankkitili(omistaja)
 {
     luottoraja = lr;
-    cout << "luottoraja= " << luottoraja << endl;
+    cout << "luottoraja = " << luottoraja << endl;
 }
 
 bool Luottotili::withdraw(double summa)

@@ -22,11 +22,11 @@ int main()
     cout << endl;
     B.showSaldo();
     cout << endl;
-    cout << A.getName();
+    cout << B.getName();
     cout << endl;
     A.tilisiirto(50, B);
     cout << endl;
-    cout << A.getName();
+    cout << B.getName();
     cout << endl;
     B.showSaldo();
     cout << endl;

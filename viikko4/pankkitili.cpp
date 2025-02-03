@@ -1,7 +1,7 @@
 #include "pankkitili.h"
 
 Pankkitili::Pankkitili() {
-    cout << "destruktori" << endl;
+    cout << "konstruktori" << endl;
 }
 
 Pankkitili::Pankkitili(string kayttaja)
@@ -9,13 +9,9 @@ Pankkitili::Pankkitili(string kayttaja)
     omistaja = kayttaja;
 }
 
-double Pankkitili::getBalance()
-{
-    return saldo;
-}
-
 bool Pankkitili::withdraw(double summa)
 {
+    cout << "saldo on " << saldo << "nostettava maara " << summa << endl;
     if (summa > saldo){
         cout <<  "inga pengar, tilillä ei ole rahaa" << endl;
         return false;
@@ -49,4 +45,8 @@ bool Pankkitili::deposit(double depo)
     else {
         return false;
     }
+}
+double Pankkitili::getBalance()
+{
+    return saldo;
 }
